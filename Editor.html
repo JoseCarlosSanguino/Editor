@@ -286,10 +286,11 @@
          }
          }
       </style>
+      <form action="action_page.php" method="post" id="formulario" name="formulario">
       <div class="container">
          <div class="row textImagen">
             <div class="col-sm-12 d-flex justify-content-center text-center">
-               <img id="imagen1" name="imagen1" src="Imagen2.jpg" style="position: relative;object-fit:cover"  class="img-fluid w-100">
+               <img id="imagen1" name="imagen1" src="Imagen2.jpg" style="position: relative;"  class="img-fluid w-100">
             </div>
             <input class="BotonImagen1" name="file-input" id="file-input" type="file" />
             <!--<p >No más puntas abiertas,<br>¡no más caída!</p>-->
@@ -299,12 +300,12 @@
          <div class="row d-flex" >
             <div class="  col-lg-7 " >
                <div class="embed-responsive embed-responsive-21by9" >
-                  <iframe  class="embed-responsive-item" src="ImagenVideo2.jpg"     >
+                  <iframe id="iframe" name="iframe" class="embed-responsive-item" src="ImagenVideo2.jpg"   frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  ">
                   </iframe>
 
                </div>
                </br>
-                  <input type="text" id="urlVideo" name="urlVideo" class="form-control" placeholder="Introduzca URL video">
+                  <input id="Video" name="Video" type="text" id="urlVideo" name="urlVideo" class="form-control" placeholder="Introduzca URL video" ">
             </div>
             <br>
             <div class=" col-lg-5 justify-content-center text-center" >
@@ -320,7 +321,8 @@
          <div class="row" >
             <div  class=" col-lg-7 justify-content-center  position2 " >
                <!--<textarea name="editorPrueba"></textarea>-->
-               <div id="introduction">
+               <input type="hidden" id="textoParrafo" name="textoParrafo" >
+               <div id="introduction" name="introduction">
                   <p>Describa las ventajas del pack.
                </p>
                <ul>
@@ -331,7 +333,17 @@
                <p><b>Producto1</b><br>Descripción de las ventajas de cada producto</p>
                
                </div>
-               
+               <!--<p>Dale la fuerza que necesita tu pelo para este verano.</br>Nutre profundamente tu pelo también desde adentro.
+                  <b>¡Siéntete segura!</b>
+               </p>
+               <ul>
+                  <li>Shampoo </li>
+                  <li>Acondicionador </li>
+                  <li>Biotina  </li>
+               </ul>
+               <p><b>Champú Anticaída SATINIQUE™</b><br>Ideal para todo tipo de cabellos, especialmente los cabellos frágiles, finos o escasos. Con ENERJUVE, que ayuda a restaurar el estado natural y saludable de tu cabello. Incluye una mezcla de productos botánicos con ginseng, extracto de Eclipta Alba y extracto de hoja de morera.</p>
+               <p><b>Acondicionador Anticaída SATINIQUE™</b><br>Perfecto para reducir la posibilidad de rotura del cabello frágil, fino y debilitado. Contiene ENERJUVE para devolverle al cabello su estado natural saludable. La mezcla contiene ginseng y extracto de hoja de morera para estimular la circulación y reducir la pérdida de cabello.</p>
+               <p><b>Biotina C Plus NUTRLITE™</b><br>Este complemento alimenticio contiene biotina, vitamina C y colágeno.La biotina contribuye al mantenimiento de un cabello normal. La vitamina C contribuye a una formación normal de colágeno para un funcionamiento adecuado de la piel.</p>-->
             </br>
                <a class="btn btn-success"  href="#" role="button" >¡Lo quiero ya!</a>
             </div>
@@ -345,6 +357,10 @@
             </div>
          </div>
          <hr>
+      </form>
+         <div class="row">
+            <input type="submit" id="enviar" name="enviar" class="btn btn-success" value="Grabar información">
+         </div>   
          <div class="row" >
             <div class=" d-flex col-lg-3 offset-lg-1 justify-content-center " >
                <img class="img-fluid imgSatisfacion" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/fda38676-563f-4ccd-af08-7d601fd2be94.png" alt=""  width="213" height="143">
@@ -413,6 +429,11 @@
 </html>
 <script>
    $( document ).ready( function() {
+
+      $("#formulario").submit(function(){
+      var value = CKEDITOR.instances['introduction'].getData() 
+       $("#textoParrafo").val(value);
+      });
       
     var introduction = document.getElementById('introduction');
     introduction.setAttribute('contenteditable', true);
@@ -426,7 +447,25 @@
       startupFocus: true
     });
   
-       
+       $("#Video").blur(function(){
+         var url_Video=$("#Video").val();
+         var cadena="https://vimeo.com/";
+         var cadena1="http://vimeo.com/";
+
+         if(url_Video.includes(cadena) || url_Video.includes(cadena1)){
+            //alert(url_Video);
+            var split_Video=url_Video.split("/");
+            var codigo =split_Video[3];
+            var cadeResul="https://player.vimeo.com/video/"+codigo+"?embedparameter=value";
+            $('#iframe').attr("src",cadeResul);
+            $('#Video').val(cadeResul);
+         }else{
+            $('#iframe').attr("src",url_Video);
+            $('#Video').val(url_Video);
+         }
+         
+   });
+ 
        
        $('#send').click(function() { 
       var value = CKEDITOR.instances['editorPrueba'].getData() 
