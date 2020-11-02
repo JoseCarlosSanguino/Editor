@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-11-2020 a las 23:08:58
+-- Tiempo de generación: 02-11-2020 a las 18:43:32
 -- Versión del servidor: 10.3.14-MariaDB
 -- Versión de PHP: 7.2.4
 
@@ -30,32 +30,34 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `trafficker_pack` (
   `id` int(10) UNSIGNED NOT NULL,
-  `image_header` varchar(250) DEFAULT NULL,
   `text_header` varchar(100) NOT NULL,
-  `url_video` varchar(250) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL,
-  `textarea_1` varchar(250) NOT NULL,
-  `textarea_2` varchar(250) NOT NULL,
-  `textarea_product` varchar(500) NOT NULL,
-  `img_product` varchar(250) DEFAULT NULL,
-  `packImagen` tinyint(1) NOT NULL DEFAULT 0
+  `video_url` varchar(250) CHARACTER SET utf8 COLLATE utf8_esperanto_ci NOT NULL,
+  `first_description` varchar(250) NOT NULL,
+  `second_description` varchar(250) NOT NULL,
+  `product_description` varchar(500) NOT NULL,
+  `picture_pack` tinyint(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `trafficker_pack`
 --
 
-INSERT INTO `trafficker_pack` (`id`, `image_header`, `text_header`, `url_video`, `textarea_1`, `textarea_2`, `textarea_product`, `img_product`, `packImagen`) VALUES
-(2, NULL, 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(3, NULL, 'Inserte texto', 'fsdfdasfads', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(4, NULL, 'Inserte texto', 'fasfsda', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(5, NULL, 'Inserte texto', 'fasdfd', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(6, NULL, 'Inserte texto', 'fdsfads', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(7, NULL, 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(8, NULL, 'Inserte texto', 'fasdfasd', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', NULL, 0),
-(9, 'img/packs/9/header.jpg', 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 'img/packs/9/product.jpg', 0),
-(10, 'img/packs/10/header.jpg', 'Inserte textoss', 'pruebass', 'Pulse aqui para insertar texto prueba numero 10.\r\n                  ', 'Pulse aquÃ­ para insertar texto 10....', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 11</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n	<li>esto es una prueba 10</li>\r\n</ul>\r\n\r\n<p><strong>Producto11</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 'img/packs/10/product.jpg', 0),
-(11, 'img/packs/11/header.jpg', 'Inserte texto', 'fasdfads', 'Pulse aqui para insertar texto.\r\n                  ', 'Pulse aquÃ­ para insertar texto', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 'img/packs/11/product.jpg', 1),
-(12, 'img/packs/12/header.jpg', 'Inserte texto', 'dddddddddddddddddddddddddd', 'Pulse aqui para insertar texto.\r\n                  ', 'Pulse aquÃ­ para insertar texto', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 'img/packs/12/product.jpg', 0);
+INSERT INTO `trafficker_pack` (`id`, `text_header`, `video_url`, `first_description`, `second_description`, `product_description`, `picture_pack`) VALUES
+(2, 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(3, 'Inserte texto', 'fsdfdasfads', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(4, 'Inserte texto', 'fasfsda', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(5, 'Inserte texto', 'fasdfd', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(6, 'Inserte texto', 'fdsfads', 'Pulse aqui para insertar texto.\r\n                  ..', 'Pulse aquÃ­ para insertar textoss. \"hola\"', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(7, 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(8, 'Inserte texto', 'fasdfasd', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(9, 'Inserte texto', 'https://player.vimeo.com/video/446962586?embedparameter=value', 'Pulse aqui para insertar texto.\r\n                  ', '', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(10, 'Inserte textoss', 'pruebass', 'Pulse aqui para insertar texto prueba numero 10.ss \"hola\"\r\n                  ..', 'Pulse aquÃ­ para insertar texto 10......', '', 0),
+(11, 'Inserte texto', 'fasdfads', 'Pulse aqui para insertar texto.\r\n                  ..', 'Pulse aquÃ­ para insertar texto..', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 1),
+(12, 'Inserte texto', 'dddddddddddddddddddddddddd', 'Pulse aqui para insertar texto.\r\n                  ', 'Pulse aquÃ­ para insertar texto', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(13, 'Inserte texto', 'iiiiiiiiiiiiiiiiiii', 'Pulse aqui para insertar texto.2222\r\n                     ', 'Pulse aquÃ­ para insertar texto', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(14, 'Inserte texto', 'aaaaaa', 'Pulse aqui para insertar texto.\r\n                     ', 'Pulse aquÃ­ para insertar texto', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(15, 'Inserte texto', '\'hola\' \"hola\"', '', 'Pulse aquÃ­ para insertar texto.', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0),
+(16, 'Inserte textos89', 'hols \'jajaj\' \"prueba\"', 'Pulse aqui para insertar texto. \"hola\" 1\r\n                     ..........', 'Pulse aquÃ­ para insertar texto \'adios\'..........', '<p>Describa las ventajas del pack.</p>\r\n\r\n<ul>\r\n	<li>Nombre Producto 1</li>\r\n	<li>Nombre Producto 2</li>\r\n	<li>Nombre Produco 3</li>\r\n	<li>nuevo producto &quot;hola&quot;</li>\r\n</ul>\r\n\r\n<p><strong>Producto1</strong><br />\r\nDescripci&oacute;n de las ventajas de cada producto</p>\r\n', 0);
 
 --
 -- Índices para tablas volcadas
@@ -75,7 +77,7 @@ ALTER TABLE `trafficker_pack`
 -- AUTO_INCREMENT de la tabla `trafficker_pack`
 --
 ALTER TABLE `trafficker_pack`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
