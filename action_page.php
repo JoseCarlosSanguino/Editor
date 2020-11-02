@@ -5,7 +5,7 @@ $db = mysqli_connect("localhost", "root", "", "plantillas");
 if ($_POST["option"] == "alta") {
 
 	$check = $_POST["checkPressed"];
-	$textHeader = $db->real_escape_string($_POST["textHeader"]);
+	$textHeader = $db->real_escape_string(nl2br($_POST["textHeader"]));
 	$urlVideo = $db->real_escape_string($_POST["urlVideo"]);
 	$firstDescription = $db->real_escape_string($_POST["firstDescription"]);
 	$secondDescription = $db->real_escape_string($_POST["secondDescription"]);
@@ -34,7 +34,7 @@ if ($_POST["option"] == "modificar") {
 	$idModificar = $_GET["id"];
 
 	$check = $_POST["checkPressed"];
-	$textHeader = $db->real_escape_string($_POST["textHeader"]);
+	$textHeader = $db->real_escape_string(nl2br($_POST["textHeader"]));
 	$urlVideo = $db->real_escape_string($_POST["urlVideo"]);
 	$firstDescription = $db->real_escape_string($_POST["firstDescription"]);
 	$secondDescription = $db->real_escape_string($_POST["secondDescription"]);

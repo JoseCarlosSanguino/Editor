@@ -325,9 +325,9 @@ if ($option == "modificar") {
             <div class="row textImagen">
                <div class="col-sm-12 d-flex justify-content-center text-center">
                   <?php if (empty($_GET["id"])) {?>
-                  <img id="imagen1" name="imagen1" src="Imagen2.jpg" style="position: relative;object-fit:cover;height: 300px;"  class="img-fluid w-100">
+                  <img id="imagen1" name="imagen1" src="Imagen2.jpg" style="position: relative;object-fit:cover;max-height: 350px;"  class="img-fluid w-100">
                   <?php } else {?>
-                  <img id="imagen1" name="imagen1" src="img/packs/<?php echo $_GET["id"] ?>/header.jpg" style="position: relative;object-fit:cover;height: 300px;"  class="img-fluid w-100">
+                  <img id="imagen1" name="imagen1" src="img/packs/<?php echo $_GET["id"] ?>/header.jpg" style="position: relative;object-fit:cover;max-height: 350px;"  class="img-fluid w-100">
                   <?php }?>
                </div>
                <input class="BotonImagen1" name="file-input" id="file-input" type="file" />
@@ -335,7 +335,7 @@ if ($option == "modificar") {
                <?php if (empty($row["text_header"])) {?>
                <textarea id="textHeader" name="textHeader"style=" background-color: transparent;display:none; " required >Inserte texto</textarea>
                <?php } else {?>
-               <textarea id="textHeader" name="textHeader"style=" background-color: transparent; " required ><?php echo htmlentities($row["text_header"]) ?></textarea>
+               <textarea id="textHeader" name="textHeader"style=" background-color: transparent; " required ><?php echo (str_replace("<br />", "", $row["text_header"])) ?></textarea>
                <?php }?>
             </div>
             <br>
@@ -405,7 +405,7 @@ if ($option == "modificar") {
                <input class="BotonImagen2" name="file-input2" id="file-input2" type="file" />
                <?php } else {?>
                <img class="img-fluid imgProducto" id="imagen2" name="imagen2" src="img/packs/<?php echo $_GET["id"] ?>/product.jpg" alt="" height="auto" / >
-               <?php if ($row["packImagen"] == 1) {?>
+               <?php if ($row["picture_pack"] == 1) {?>
                <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/cdc77ef4-2424-4e3a-83f1-4b2fc9a0e270.png" alt="" width="170" height="144" style="visibility: visible" />
                <input id="checkPack" name="checkPack" type="checkbox"   checked=""> <label id="labelPack" name="labelPack"  >Activar pack</label></input>
                <?php } else {?>
@@ -515,6 +515,7 @@ if ($option == "modificar") {
          alert("Debes de cargar la imagen del producto");
          event.preventDefault();
        }
+
 
       });
 
