@@ -312,7 +312,7 @@ if ($option == "modificar") {
          }
          }
       </style>
-      <?php if (empty($_GET["id"])) {?>
+      <?php if (!empty($_GET["id"])) {?>
       <form action="action_page.php?id=<?php echo $_GET["id"] ?>" method="post" id="formulario" name="formulario" enctype="multipart/form-data">
          <?php } else {?>
       <form action="action_page.php" method="post" id="formulario" name="formulario" enctype="multipart/form-data">
