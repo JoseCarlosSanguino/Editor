@@ -400,16 +400,16 @@ if ($option == "modificar") {
             <div class="  col-lg-5 justify-content-center  position    "  >
                <?php if (empty($_GET["id"])) {?>
                <img class="img-fluid imgProducto" id="imagen2" name="imagen2" src="Imagen2Vacia.jpg" alt="" height="auto" / >
-               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/cdc77ef4-2424-4e3a-83f1-4b2fc9a0e270.png" alt="" width="170" height="144" style="visibility: hidden"/>
+               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="IconoPack.png" alt="" width="170" height="144" style="visibility: hidden"/>
                <input id="checkPack" name="checkPack" type="checkbox"   style="visibility: hidden"> <label id="labelPack" name="labelPack" for="cbox2" style="visibility: hidden;">Activar pack</label></input>
                <input class="BotonImagen2" name="file-input2" id="file-input2" type="file" />
                <?php } else {?>
                <img class="img-fluid imgProducto" id="imagen2" name="imagen2" src="img/packs/<?php echo $_GET["id"] ?>/product.jpg?nocache=<?php echo time(); ?>" alt="" height="auto" / >
                <?php if ($row["picture_pack"] == 1) {?>
-               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/cdc77ef4-2424-4e3a-83f1-4b2fc9a0e270.png" alt="" width="170" height="144" style="visibility: visible" />
+               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="IconoPack.png" alt="" width="170" height="144" style="visibility: visible" />
                <input id="checkPack" name="checkPack" type="checkbox"   checked=""> <label id="labelPack" name="labelPack"  >Activar pack</label></input>
                <?php } else {?>
-               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/cdc77ef4-2424-4e3a-83f1-4b2fc9a0e270.png" alt="" width="170" height="144" style="visibility: hidden" />
+               <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="IconoPack.png" alt="" width="170" height="144" style="visibility: hidden" />
                <input id="checkPack" name="checkPack" type="checkbox"> <label id="labelPack" name="labelPack"  >Activar pack</label></input>
                <?php }?>
                <input class="BotonImagen2" name="file-input2" id="file-input2" type="file" />
@@ -423,7 +423,7 @@ if ($option == "modificar") {
       </div>
       <div class="row" >
          <div class=" d-flex col-lg-3 offset-lg-1 justify-content-center " >
-            <img class="img-fluid imgSatisfacion" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/fda38676-563f-4ccd-af08-7d601fd2be94.png" alt=""  width="213" height="143">
+            <img class="img-fluid imgSatisfacion" src="100Calidad.png" alt=""  width="213" height="143">
          </div>
          <br>
          <div class=" d-flex col-lg-6 offset-lg-1 justify-content-center text-center pt-5" >
@@ -463,7 +463,7 @@ if ($option == "modificar") {
       </div>
       <div class="row" >
          <div class=" d-flex col-lg-3 offset-lg-3 justify-content-center " >
-            <img class="img-fluid" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/1db81f16-7aa5-4020-b91d-31c77c409df1.png" alt="" width="155" height="73">
+            <img class="img-fluid" src="CompraSegura.png" alt="" width="155" height="73">
          </div>
          <div class=" d-flex col-lg-3  justify-content-center mt-3" >
             <div class="infoEmpresa">
