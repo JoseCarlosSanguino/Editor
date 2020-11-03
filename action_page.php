@@ -50,17 +50,19 @@ if ($_POST["option"] == "modificar") {
 	$name_header = "header.jpg";
 	$name_product = "product.jpg";
 	$path = "img/packs/" . $idModificar . "/";
-	if ($imagen_cabera != "") {
+	if ($_FILES['file-input']['tmp_name'] != "") {
 		if (!file_exists($path)) {
 			mkdir($path, 0777, true);
 		}
+	    move_uploaded_file($_FILES['file-input']['tmp_name'], $path . $name_header);	
 
 	}
 
-	if ($imagen_producto != "") {
+	if ($_FILES['file-input2']['tmp_name'] != "") {
 		if (!file_exists($path)) {
 			mkdir($path, 0777, true);
 		}
+		move_uploaded_file($_FILES['file-input2']['tmp_name'], $path . $name_product);
 
 	}
 	header("Location: Editor.php?modificar=1&id=" . $idModificar);

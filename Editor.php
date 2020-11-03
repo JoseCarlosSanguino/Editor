@@ -327,7 +327,7 @@ if ($option == "modificar") {
                   <?php if (empty($_GET["id"])) {?>
                   <img id="imagen1" name="imagen1" src="Imagen2.jpg" style="position: relative;object-fit:cover;max-height: 350px;"  class="img-fluid w-100">
                   <?php } else {?>
-                  <img id="imagen1" name="imagen1" src="img/packs/<?php echo $_GET["id"] ?>/header.jpg" style="position: relative;object-fit:cover;max-height: 350px;"  class="img-fluid w-100">
+                  <img id="imagen1" name="imagen1" src="img/packs/<?php echo $_GET["id"] ?>/header.jpg?nocache=<?php echo time(); ?>" style="position: relative;object-fit:cover;max-height: 350px;"  class="img-fluid w-100">
                   <?php }?>
                </div>
                <input class="BotonImagen1" name="file-input" id="file-input" type="file" />
@@ -361,15 +361,15 @@ if ($option == "modificar") {
                <div class=" col-lg-5 justify-content-center text-center" >
                   <div class="textVideo">
                      <?php if (empty($row["first_description"])) {?>
-                     <textarea id="firstDescription" name="firstDescription" style="background-color: transparent;border:none;overflow:hidden" required>Pulse aqui para insertar texto.
+                     <textarea id="firstDescription" name="firstDescription" style="background-color: transparent;border:none;overflow:hidden" required>Pulse aquí para insertar texto.
                      </textarea>
                      <?php } else {?>
-                     <textarea id="firstDescription" name="firstDescription" style="background-color: transparent;border:none;overflow:hidden" required><?php echo htmlentities($row["first_description"]) ?>.</textarea>
+                     <textarea id="firstDescription" name="firstDescription" style="background-color: transparent;border:none;overflow:hidden" required><?php echo htmlentities($row["first_description"])?></textarea>
                      <?php }?>
                      <?php if (empty($row["second_description"])) {?>
                      <textarea id="secondDescription" name="secondDescription" style=" background-color: transparent;border:none;overflow:hidden " required>Pulse aquí para insertar texto</textarea>
                      <?php } else {?>
-                     <textarea id="secondDescription" name="secondDescription" style=" background-color: transparent;border:none;overflow:hidden " required><?php echo htmlentities($row["second_description"]) ?>.</textarea>
+                     <textarea id="secondDescription" name="secondDescription" style=" background-color: transparent;border:none;overflow:hidden " required><?php echo htmlentities($row["second_description"])?></textarea>
                      <?php }?>
                      <a class="btn btn-success" id="send" name="send" href="#" role="button" >¡Comprar!</a>
                   </div>
@@ -386,7 +386,7 @@ if ($option == "modificar") {
                      <ul>
                         <li>Nombre Producto 1 </li>
                         <li>Nombre Producto 2</li>
-                        <li>Nombre Produco 3</li>
+                        <li>Nombre Producto 3</li>
                      </ul>
                      <p><b>Producto1</b><br>Descripción de las ventajas de cada producto</p>
                   </div>
@@ -404,7 +404,7 @@ if ($option == "modificar") {
                <input id="checkPack" name="checkPack" type="checkbox"   style="visibility: hidden"> <label id="labelPack" name="labelPack" for="cbox2" style="visibility: hidden;">Activar pack</label></input>
                <input class="BotonImagen2" name="file-input2" id="file-input2" type="file" />
                <?php } else {?>
-               <img class="img-fluid imgProducto" id="imagen2" name="imagen2" src="img/packs/<?php echo $_GET["id"] ?>/product.jpg" alt="" height="auto" / >
+               <img class="img-fluid imgProducto" id="imagen2" name="imagen2" src="img/packs/<?php echo $_GET["id"] ?>/product.jpg?nocache=<?php echo time(); ?>" alt="" height="auto" / >
                <?php if ($row["picture_pack"] == 1) {?>
                <img id="imagenPack" name="imagenPack" class="img-fluid imgProducto2" src="https://us-ms.gr-cdn.com/getresponse-wCxnR/photos/cdc77ef4-2424-4e3a-83f1-4b2fc9a0e270.png" alt="" width="170" height="144" style="visibility: visible" />
                <input id="checkPack" name="checkPack" type="checkbox"   checked=""> <label id="labelPack" name="labelPack"  >Activar pack</label></input>
